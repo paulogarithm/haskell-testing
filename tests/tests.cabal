@@ -1,0 +1,18 @@
+cabal-version:          2.4
+name:                   basic-sum
+version:                0.1.0.0
+extra-source-files:     CHANGELOG.md
+author:                 Paul Parisot
+
+library basic-sum-lib
+    exposed-modules:    My
+    hs-source-dirs:     ..
+    build-depends:      base
+    default-language:   Haskell2010
+
+test-suite test
+    main-is:            tests.hs
+    type:               exitcode-stdio-1.0
+    build-depends:      base, HUnit, basic-sum-lib
+    hs-source-dirs:     .
+    default-language:   Haskell2010
